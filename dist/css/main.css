@@ -196,9 +196,8 @@ h5 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  justify-content: space-evenly;
-  height: 1.4rem;
-  width: 1.6rem;
+  height: 1.5rem;
+  width: 1.5rem;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent; }
   @media screen and (min-width: 1024px) {
@@ -206,20 +205,24 @@ h5 {
       display: none; } }
 
 .home-page__btn-lines {
-  height: .1rem;
-  width: 100%;
+  height: 2px;
+  width: 1.5rem;
+  margin: 2px 0;
   background: #8C43FF;
   -webkit-transition: .2s;
-  transition: .2s; }
+  transition: .2s;
+  -webkit-perspective: 1000;
+  outline: .1px solid transparent;
+  will-change: transform; }
 
 .animate .home-page__btn-lines:nth-child(1) {
-  -webkit-transform: translateY(6px) rotate(45deg);
-  transform: translateY(6px) rotate(45deg); }
+  -webkit-transform: translate3d(0, 6px, 0) rotateZ(45deg);
+  transform: translate3d(0, 6px, 0) rotateZ(45deg); }
 .animate .home-page__btn-lines:nth-child(2) {
   opacity: 0; }
 .animate .home-page__btn-lines:nth-child(3) {
-  -webkit-transform: translateY(-6px) rotate(-45deg);
-  transform: translateY(-6px) rotate(-45deg); }
+  -webkit-transform: translateY(0, -6px, 0) rotateZ(-45deg);
+  transform: translate3d(0, -6px, 0) rotateZ(-45deg); }
 
 .home-page__highlight-item {
   border: 1px solid #8C43FF;
